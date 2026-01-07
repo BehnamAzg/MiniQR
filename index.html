@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixQR</title>
+    <link href="/src/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script defer type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <main class="max-w-sm max-sm:w-full h-screen flex-center flex-col mx-auto gap-3 max-sm:p-8 select-none">
+      <!-- QR Code -->
+      <div class="border w-1/3 aspect-square rounded-xl mb-4"></div>
+
+      <!-- Warning -->
+      <!-- <div role="alert" class="alert alert-warning w-full h-9 flex">
+        <svg class="h-5 w-5 shrink-0 stroke-current" fill="none">
+          <use href="/icons.svg#icon-warning"></use>
+        </svg>
+        <span>Warning: Invalid email address!</span>
+      </div> -->
+
+      <!-- Textarea -->
+      <fieldset class="fieldset w-full">
+        <legend class="fieldset-legend w-full font-bold text-md">Type your text or URL:</legend>
+        <textarea class="textarea textarea-sm w-full min-h-4 mt-1 rounded-lg" placeholder="Text / URL"></textarea>
+      </fieldset>
+
+      <div class="w-full flex gap-8">
+        <!-- Size -->
+        <fieldset class="fieldset w-full">
+          <legend class="fieldset-legend w-full font-bold">Size:</legend>
+          <div class="w-full">
+            <input type="range" min="0" max="100" value="0" class="range range-sm w-full" step="50" />
+            <div class="flex justify-between px-1.5 mt-2 text-xs w-full">
+              <span>256</span>
+              <span>512</span>
+              <span>1024</span>
+            </div>
+          </div>
+        </fieldset>
+        <!-- Padding -->
+        <fieldset class="fieldset w-full">
+          <legend class="fieldset-legend w-full font-bold">Padding:</legend>
+          <div class="w-full">
+            <input type="range" min="0" max="100" value="0" class="range range-sm w-full" step="25" />
+            <div class="flex justify-between px-1.5 mt-2 text-xs w-full">
+              <span>0</span>
+              <span>4</span>
+              <span>8</span>
+              <span>16</span>
+              <span>32</span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="w-full flex gap-8">
+        <!-- Color -->
+        <fieldset class="fieldset w-full">
+          <legend class="fieldset-legend w-full font-bold">Color:</legend>
+          <select class="select select-sm rounded-lg cursor-pointer">
+            <option selected>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
+            <option>White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
+          </select>
+        </fieldset>
+        <!-- Bg Color -->
+        <fieldset class="fieldset w-full">
+          <legend class="fieldset-legend w-full font-bold">Bg Color:</legend>
+          <select class="select select-sm rounded-lg cursor-pointer">
+            <option selected>None</option>
+            <option>White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option>Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
+          </select>
+        </fieldset>
+
+        <!-- Format -->
+        <fieldset class="fieldset w-full">
+          <legend class="fieldset-legend w-full font-bold">Format:</legend>
+          <div class="w-full h-8 flex-center justify-start gap-1">
+            <input id="png" type="radio" name="radio-1" class="radio radio-xs" checked="checked" />
+            <label for="png">PNG</label>
+            <div class="w-2"></div>
+            <input id="svg" type="radio" name="radio-1" class="radio radio-xs" checked="checked" />
+            <label for="svg">SVG</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Download -->
+      <button class="btn btn-accent w-full mt-4 rounded-lg disabled:cursor-not-allowed" >Download</button>
+
+      <!-- <div style="max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #e5e5e5; border-radius: 10px; background: #ffffff">
+        <h2 style="text-align: center; font-size: 28px; margin-bottom: 20px; font-weight: 600">Generate Your QR Code</h2>
+
+        <label style="font-size: 16px; font-weight: 500">Enter text or a URL:</label>
+        <input id="qrInput" type="text" placeholder="Type or paste anything…" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; margin: 10px 0 20px" />
+
+        <button onclick="generateQR()" style="width: 100%; padding: 14px; background: #1a73e8; color: #fff; font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600">Generate QR Code</button>
+
+        <div id="qrContainer" style="text-align: center; margin-top: 30px"></div>
+      </div> -->
+    </main>
+  </body>
+</html>
