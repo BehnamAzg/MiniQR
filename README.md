@@ -8,6 +8,7 @@
 [![][license]](https://github.com/BehnamAzg/MiniQR/blob/main/LICENSE)
 [![][version]](https://github.com/BehnamAzg/MiniQR/releases)
 [![][stars]](https://github.com/BehnamAzg/MiniQR)
+[![Support]](https://temp-donation-link.com)
 
 </div>
 
@@ -17,5 +18,5 @@
 [license]: https://img.shields.io/github/license/BehnamAzg/MiniQR.svg?style=flat-square
 [version]: https://img.shields.io/github/v/release/BehnamAzg/MiniQR.svg?style=flat-square
 [stars]: https://img.shields.io/github/stars/BehnamAzg/MiniQR.svg?style=flat-square
-
+[Support]: https://img.shields.io/badge/Support%20Project-❤️-red?style=flat-square
 
