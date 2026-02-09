@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/BehnamAzg/MiniQR/raw/main/public/icons/icon.svg" alt="MiniQR Icon" width="128">
+<img src="https://github.com/BehnamAzg/MiniQR/raw/main/public/icon.svg" alt="MiniQR Icon" width="128">
 
 # MiniQR
 
@@ -14,7 +14,9 @@
 
 </div>
 
+<div align="center">
 ## 🚧 Under Development 🚧
+</div>
 
 [license]: https://img.shields.io/github/license/BehnamAzg/GhostCrypt?style=plastic-square
 [stars]: https://img.shields.io/github/stars/BehnamAzg/GhostCrypt?style=plastic-square
