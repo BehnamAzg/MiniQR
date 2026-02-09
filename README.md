@@ -1,22 +1,21 @@
 <div align="center">
 
-[![][logo-url]][docs-url]
+<img src="https://github.com/BehnamAzg/MiniQR/raw/main/public/icons/icon.svg" alt="MiniQR Icon" width="128">
 
 # MiniQR
+
 **_Minimal • Lightweight • QR Code Generator_**
 
-[![][license]](https://github.com/BehnamAzg/MiniQR/blob/main/LICENSE)
-[![][version]](https://github.com/BehnamAzg/MiniQR/releases)
-[![][stars]](https://github.com/BehnamAzg/MiniQR)
-[![Support]](https://temp-donation-link.com)
+[![][license]](https://github.com/BehnamAzg/MiniQR/blob/main/LICENSE) [![][stars]](https://github.com/BehnamAzg/MiniQR) [![Support]](https://behnamazg.github.io/donation)
+
+[![Open MiniQR ](https://img.shields.io/badge/Open_MiniQR-white?style=for-the-badge)](https://behnamazg.github.io/miniqr)
+
+
 
 </div>
 
-[docs-url]: https://daisyui.com/
-[logo-url]: https://img.daisyui.com/images/daisyui/daisyui-logo-192.png
+## 🚧 Under Development 🚧
 
-[license]: https://img.shields.io/github/license/BehnamAzg/MiniQR.svg?style=flat-square
-[version]: https://img.shields.io/github/v/release/BehnamAzg/MiniQR.svg?style=flat-square
-[stars]: https://img.shields.io/github/stars/BehnamAzg/MiniQR.svg?style=flat-square
-[Support]: https://img.shields.io/badge/Donate-❤️-red?style=flat-square
-
+[license]: https://img.shields.io/github/license/BehnamAzg/GhostCrypt?style=plastic-square
+[stars]: https://img.shields.io/github/stars/BehnamAzg/GhostCrypt?style=plastic-square
+[Support]: https://img.shields.io/badge/Donate-🖤-white?style=plastic-square

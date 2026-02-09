@@ -12,16 +12,16 @@
   <body>
     <main class="max-w-sm max-sm:w-full h-screen flex-center flex-col mx-auto gap-4 max-sm:p-8 select-none relative">
       <!-- QR Code -->
-      <div class="border border-neutral border-dashed w-2/5 aspect-square rounded-xl mb-3 flex-center">
-        <svg class="h-10 w-10" fill="currentColor" stroke="currentColor">
-          <use href="/icons.svg#icon-download"></use>
+      <div id="qrContainer" class="border border-neutral border-dashed w-2/5 aspect-square rounded-xl mb-3 flex-center">
+        <svg class="h-12 w-12 opacity-25" fill="currentColor" stroke="currentColor">
+          <use href="/logo.svg"></use>
         </svg>
       </div>
 
       <!-- Textarea -->
       <fieldset class="fieldset w-full">
         <legend class="fieldset-legend w-full font-bold text-md">Type your text or URL:</legend>
-        <textarea class="textarea textarea-sm w-full min-h-4 mt-1 rounded-lg" placeholder="Text / URL"></textarea>
+        <textarea id="qrInput" class="textarea textarea-sm w-full min-h-4 mt-1 rounded-lg" placeholder="Text / URL"></textarea>
       </fieldset>
 
       <div class="w-full flex gap-8">
@@ -29,7 +29,7 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Size:</legend>
           <div class="w-full">
-            <input type="range" min="256" max="1024" value="0" class="range range-sm w-full" step="384" />
+            <input id="qrSize" type="range" min="256" max="1024" value="0" class="range range-sm w-full" step="384" />
             <div class="flex justify-between px-1.5 mt-2 text-xs w-full">
               <span>256</span>
               <span>512</span>
@@ -41,7 +41,7 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Padding:</legend>
           <div class="w-full">
-            <input type="range" min="0" max="32" value="0" class="range range-sm w-full" step="8" />
+            <input id="qrPadding" type="range" min="0" max="32" value="0" class="range range-sm w-full" step="8" />
             <div class="flex justify-between px-1.5 mt-2 text-xs w-full">
               <span>0</span>
               <span>4</span>
@@ -57,24 +57,24 @@
         <!-- Color -->
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Color:</legend>
-          <select class="select select-sm rounded-lg cursor-pointer">
-            <option selected>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
-            <option>White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
+          <select id="qrColor" class="select select-sm rounded-lg cursor-pointer">
+            <option value="#000000" selected>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
           </select>
         </fieldset>
         <!-- Bg Color -->
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Bg Color:</legend>
-          <select class="select select-sm rounded-lg cursor-pointer">
-            <option selected>None</option>
-            <option>White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option>Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
+          <select id="qrBgColor" class="select select-sm rounded-lg cursor-pointer">
+            <option value="#ffffff" selected>None</option>
+            <option value="#ffffff">White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff">Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
           </select>
         </fieldset>
 
@@ -82,10 +82,10 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Format:</legend>
           <div class="w-full h-8 flex-center justify-start gap-1">
-            <input id="png" type="radio" name="radio-1" class="radio radio-xs" checked="checked" />
+            <input id="png" type="radio" name="format" class="radio radio-xs" checked="checked" />
             <label for="png">PNG</label>
             <div class="w-2"></div>
-            <input id="svg" type="radio" name="radio-1" class="radio radio-xs" checked="checked" />
+            <input value="svg" id="svg" type="radio" name="format" class="radio radio-xs" checked="checked" />
             <label for="svg">SVG</label>
           </div>
         </fieldset>
@@ -93,14 +93,14 @@
 
       <div class="w-full flex gap-3 my-3">
         <!-- Install -->
-        <button class="btn bg-blue-500 text-white w-full rounded-lg shrink">
+        <button type="button" data-action="install" name="install-button" class="btn bg-blue-500 text-white w-full rounded-lg shrink">
           <svg class="h-4 w-4" fill="currentColor" stroke="currentColor">
             <use href="/icons.svg#icon-download"></use>
           </svg>
           Install the App
         </button>
         <!-- Download -->
-        <button class="btn btn-neutral w-full rounded-lg shrink">
+        <button type="button" data-action="download" name="download-button" class="btn btn-neutral w-full rounded-lg shrink">
           <svg class="h-4 w-4" fill="currentColor" stroke="currentColor">
             <use href="/icons.svg#icon-download"></use>
           </svg>
