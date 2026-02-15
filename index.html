@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <title>MiniQR</title>
     <link href="/src/style.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script defer type="module" src="/src/main.js"></script>
   </head>
   <body>
     <main class="max-w-sm max-sm:w-full h-screen flex-center flex-col mx-auto gap-4 max-sm:p-8 select-none relative">
       <!-- QR Code -->
-      <div id="qrContainer" class="border border-neutral border-dashed w-2/5 aspect-square rounded-xl mb-3 flex-center">
+      <div id="qrContainer" class="border border-neutral border-dashed w-2/5 aspect-square rounded-xl mb-3 flex-center p-1">
         <svg class="h-12 w-12 opacity-25" fill="currentColor" stroke="currentColor">
           <use href="/logo.svg"></use>
         </svg>
@@ -29,11 +29,11 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Size:</legend>
           <div class="w-full">
-            <input id="qrSize" type="range" min="256" max="1024" value="0" class="range range-sm w-full" step="384" />
+            <input id="qrSize" type="range" min="256" max="768" value="0" class="range range-sm w-full" step="256" />
             <div class="flex justify-between px-1.5 mt-2 text-xs w-full">
               <span>256</span>
               <span>512</span>
-              <span>1024</span>
+              <span>768</span>
             </div>
           </div>
         </fieldset>
@@ -41,13 +41,12 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Padding:</legend>
           <div class="w-full">
-            <input id="qrPadding" type="range" min="0" max="32" value="0" class="range range-sm w-full" step="8" />
+            <input id="qrPadding" type="range" min="0" max="6" value="2" class="range range-sm w-full" step="2" />
             <div class="flex justify-between px-1.5 mt-2 text-xs w-full">
-              <span>0</span>
-              <span>4</span>
-              <span>8</span>
-              <span>16</span>
-              <span>32</span>
+              <span>No</span>
+              <span>Sm</span>
+              <span>Md</span>
+              <span>Lg</span>
             </div>
           </div>
         </fieldset>
@@ -58,23 +57,23 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Color:</legend>
           <select id="qrColor" class="select select-sm rounded-lg cursor-pointer">
-            <option value="#000000" selected>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#000000ff" selected>Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffffff">White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="feaca4ff">Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#93c5fdff">Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#86efacff">Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
           </select>
         </fieldset>
         <!-- Bg Color -->
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Bg Color:</legend>
           <select id="qrBgColor" class="select select-sm rounded-lg cursor-pointer">
-            <option value="#ffffff" selected>None</option>
-            <option value="#ffffff">White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
-            <option value="#ffffff">Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#ffffff00" selected>None</option>
+            <option value="#ffffffff">White <span class="ml-auto border bg-white w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#000000ff">Black <span class="ml-auto bg-black w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="feaca4ff">Red <span class="ml-auto bg-red-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#93c5fdff">Blue <span class="ml-auto bg-blue-400 w-3.5 h-3.5 rounded-full"></span></option>
+            <option value="#86efacff">Green <span class="ml-auto bg-green-400 w-3.5 h-3.5 rounded-full"></span></option>
           </select>
         </fieldset>
 
@@ -82,10 +81,10 @@
         <fieldset class="fieldset w-full">
           <legend class="fieldset-legend w-full font-bold">Format:</legend>
           <div class="w-full h-8 flex-center justify-start gap-1">
-            <input id="png" type="radio" name="format" class="radio radio-xs" checked="checked" />
+            <input id="png" type="radio" name="format" class="radio radio-xs" value="png" checked="checked" />
             <label for="png">PNG</label>
             <div class="w-2"></div>
-            <input value="svg" id="svg" type="radio" name="format" class="radio radio-xs" checked="checked" />
+            <input value="svg" id="svg" type="radio" name="format" class="radio radio-xs " checked="checked" />
             <label for="svg">SVG</label>
           </div>
         </fieldset>
@@ -93,14 +92,14 @@
 
       <div class="w-full flex gap-3 my-3">
         <!-- Install -->
-        <button type="button" data-action="install" name="install-button" class="btn bg-blue-500 text-white w-full rounded-lg shrink">
+        <button id="installBtn" type="button" data-action="install" name="install-button" class="btn bg-blue-500 text-white w-full rounded-lg shrink hidden">
           <svg class="h-4 w-4" fill="currentColor" stroke="currentColor">
             <use href="/icons.svg#icon-download"></use>
           </svg>
           Install the App
         </button>
         <!-- Download -->
-        <button type="button" data-action="download" name="download-button" class="btn btn-neutral w-full rounded-lg shrink">
+        <button id="downloadBtn" type="button" data-action="download" name="download-button" class="btn btn-neutral w-full rounded-lg shrink" disabled>
           <svg class="h-4 w-4" fill="currentColor" stroke="currentColor">
             <use href="/icons.svg#icon-download"></use>
           </svg>
@@ -111,23 +110,12 @@
       <p class="text-xs mt-6 flex flex-nowrap">
         MiniQR - Version 1.0.0
         <span class="mx-2">|</span>
-        <a href="/" target="_blank" title="Github" class="link rounded-sm">Github</a>
+        <a href="https://github.com/BehnamAzg/MiniQR" target="_blank" title="Github" class="link rounded-sm">Github</a>
         <span class="mx-2">|</span>
-        <a href="/" target="_blank" title="Donate" class="link rounded-sm">Donate</a>
+        <a href="https://behnamazg.github.io/Donation" target="_blank" title="Donate" class="link rounded-sm">Donate</a>
         <span class="mx-2">|</span>
-        <a href="/" target="_blank" title="Share" class="link rounded-sm">Share</a>
+        <button data-action="share" title="Share" class="link rounded-sm">Share</button>
       </p>
-
-      <!-- <div style="max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #e5e5e5; border-radius: 10px; background: #ffffff">
-        <h2 style="text-align: center; font-size: 28px; margin-bottom: 20px; font-weight: 600">Generate Your QR Code</h2>
-
-        <label style="font-size: 16px; font-weight: 500">Enter text or a URL:</label>
-        <input id="qrInput" type="text" placeholder="Type or paste anything…" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; margin: 10px 0 20px" />
-
-        <button onclick="generateQR()" style="width: 100%; padding: 14px; background: #1a73e8; color: #fff; font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600">Generate QR Code</button>
-
-        <div id="qrContainer" style="text-align: center; margin-top: 30px"></div>
-      </div> -->
     </main>
   </body>
 </html>

@@ -1,0 +1,40 @@
+{
+  "id": "/",
+  "name": "MiniQR",
+  "short_name": "MiniQR",
+  "description": "A minimal, lightweight tool for generating QR codes quickly.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#eceff4",
+  "background_color": "#eceff4",
+  "categories": ["qrcode", "qrcode-generator", "pwa"],
+  "icons": [
+    {
+      "src": "/MiniQR/icon.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/MiniQR/icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/MiniQR/screenshot.png",
+      "sizes": "458x687",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/MiniQR/screenshot.png",
+      "sizes": "458x687",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

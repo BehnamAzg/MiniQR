@@ -1,8 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, lofi;
+  themes: lofi --default;
 }
 
 @utility flex-center {
   @apply flex justify-center items-center;
+}
+
+#qr-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#qr-wrapper svg {
+  width: 100% !important;
+  height: 100% !important;
 }

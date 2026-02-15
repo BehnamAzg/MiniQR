@@ -1,19 +1,22 @@
 {
-  "name": "qr-code-generator",
+  "name": "mini-qr",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npx workbox generateSW workbox-config.cjs",
     "preview": "vite preview"
   },
   "devDependencies": {
     "daisyui": "^5.5.14",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "workbox-cli": "^7.4.0"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "qrcode": "^1.5.4",
+    "qrious": "^4.0.2",
     "tailwindcss": "^4.1.18"
   }
 }

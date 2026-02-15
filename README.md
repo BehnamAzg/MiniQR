@@ -6,17 +6,21 @@
 
 **_Minimal • Lightweight • QR Code Generator_**
 
-[![][license]](https://github.com/BehnamAzg/MiniQR/blob/main/LICENSE) [![][stars]](https://github.com/BehnamAzg/MiniQR) [![Support]](https://behnamazg.github.io/donation)
+[![][license]](https://github.com/BehnamAzg/MiniQR/blob/main/LICENSE) [![][stars]](https://github.com/BehnamAzg/MiniQR) [![Support]](https://behnamazg.github.io/Donation)
 
-[![Open MiniQR ](https://img.shields.io/badge/Open_MiniQR-white?style=for-the-badge)](https://behnamazg.github.io/miniqr)
+[![Open MiniQR ](https://img.shields.io/badge/Open_MiniQR-white?style=for-the-badge)](https://behnamazg.github.io/MiniQR)
 
-
-
+<div align="center">
+<img src="https://github.com/BehnamAzg/MiniQR/raw/main/public/screenshot.png" alt="App Screenshot">
+</div>
+<hr>
 </div>
 
 <div align="center">
 
-## 🚧 Under Development 🚧
+#### MiniQR is a minimal, lightweight tool for generating QR codes quickly.
+
+### Powered by: [node-qrcode](https://github.com/soldair/node-qrcode) / 
 
 </div>
 
