@@ -2,6 +2,14 @@ module.exports = {
   globDirectory: "dist/",
   globPatterns: ["**/*.{js,css,html,png,jpg,svg,woff2,json}"],
   swDest: "dist/sw.js",
+
+  modifyURLPrefix: {
+    "/MiniQR/": "/",
+  },
+
+  navigateFallback: '/MiniQR/index.html',
+  navigateFallbackDenylist: [/^\/api/],
+
   runtimeCaching: [
     {
       urlPattern: ({ url }) => url.pathname.startsWith("/api/"),
@@ -29,5 +37,4 @@ module.exports = {
   cleanupOutdatedCaches: true,
   skipWaiting: true,
   clientsClaim: true,
-  navigateFallback: "/index.html",
 };
