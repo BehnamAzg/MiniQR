@@ -20,7 +20,7 @@
 
 #### MiniQR is a minimal, lightweight tool for generating QR codes quickly.
 
-### Powered by: [node-qrcode](https://github.com/soldair/node-qrcode) / 
+### Powered by: [node-qrcode](https://github.com/soldair/node-qrcode)
 
 </div>
 
