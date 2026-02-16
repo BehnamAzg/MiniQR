@@ -4,15 +4,15 @@ module.exports = {
   swDest: "dist/sw.js",
 
   modifyURLPrefix: {
-    "/MiniQR/": "/",
+    '/': '/MiniQR/',
   },
 
   navigateFallback: '/MiniQR/index.html',
-  navigateFallbackDenylist: [/^\/api/],
+  navigateFallbackDenylist: [/^\/MiniQR\/api/],
 
   runtimeCaching: [
     {
-      urlPattern: ({ url }) => url.pathname.startsWith("/api/"),
+      urlPattern: ({ url }) => url.pathname.startsWith("/MiniQR/api/"),
       handler: "NetworkFirst",
       options: {
         cacheName: "api-cache",
