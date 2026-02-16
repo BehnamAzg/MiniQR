@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/BehnamAzg/MiniQR/raw/main/public/icon.svg" alt="MiniQR Icon" width="128">
+<img src="https://github.com/BehnamAzg/MiniQR/raw/main/public/icon.svg" alt="MiniQR Icon" width="80">
 
 # MiniQR
 
