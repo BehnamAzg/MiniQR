@@ -16,10 +16,14 @@
 <hr>
 </div>
 
+#### MiniQR is a Minimal, Lightweight Tool for Generating QR Codes Quickly.
+- Custom foreground + background colors
+- Adjustable size & padding
+- Export PNG or SVG
+- Fully offline PWA
+
 <div align="center">
-
-#### MiniQR is a minimal, lightweight tool for generating QR codes quickly.
-
+  
 ### Powered by: [node-qrcode](https://github.com/soldair/node-qrcode)
 
 </div>
